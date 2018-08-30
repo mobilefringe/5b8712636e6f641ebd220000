@@ -56,12 +56,12 @@
                             	        <router-link :to="'/stores/'+ store.slug">
                                 			<!--<img class="store_img" :src="store.image_url" alt="">-->
                                 			<img v-if="!store.no_store_logo" class="store_img" :src="store.store_front_url_abs" alt="">
-                                    <div v-else class="no_logo_container">
-                                        <img class="store_img" src="//www.mallmaverick.com/system/site_images/photos/000/041/782/original/transparent_logo.png?1533845225" alt="">
-                                        <div class="no_logo_text">
-                                            <div class="store_text"><h4>{{ store.name }}</h4></div>
-                                        </div>
-                                    </div>
+                                            <div v-else class="no_logo_container">
+                                                <img class="store_img" src="//www.mallmaverick.com/system/site_images/photos/000/041/782/original/transparent_logo.png?1533845225" alt="">
+                                                <div class="no_logo_text">
+                                                    <div class="store_text"><h4>{{ store.name }}</h4></div>
+                                                </div>
+                                            </div>
                                 			<div class="store_tag" v-if="store.total_published_promos">
             									<div class="store_tag_text">Promotion</div>
             								</div>
