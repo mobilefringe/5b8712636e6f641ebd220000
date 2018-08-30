@@ -201,7 +201,7 @@
                     Cookies.set('coupon_ids', '');
                     Cookies.set('coupon_ids', JSON.stringify(vm.selected_coupon_id));
                 
-                    vm.$router.push({ path: 'online_offers/my-basket', params: { selected: vm.selected_coupon_id }});
+                    vm.$router.push({ name: 'couponBasket', params: { selected: vm.selected_coupon_id }});
                 },
                 initalizeCouponsfromCookies (){
                     if(Cookies.get('coupon_ids') !== null && Cookies.get('coupon_ids') !== undefined && Cookies.get('coupon_ids').length > 0){
