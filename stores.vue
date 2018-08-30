@@ -182,8 +182,10 @@
                     _.forEach(this.processedStores, function(value, key) {
                         if(!_.includes(value.categories, vm.dineFilter)) {
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = vm.property.transparent_logo;
-                            }
+                               value.no_store_logo = true;
+        } else {
+          value.no_store_logo = false;
+        }
                             store_list.push(value);
                         }
                     });
