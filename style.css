@@ -1553,6 +1553,24 @@ $anim-speed: 0.3s;
         display: none;
     }
 }
+.no_logo_container {
+  position: relative;
+  width: 100%;
+  .no_logo_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $primary;
+    text-transform: uppercase;
+    font-weight: 600;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: normal;
+    letter-spacing: 0.6px;
+  }
+}
+
 .listView {
     column-count: 2;
     .store_name {
