@@ -100,14 +100,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                                 name: "Center Map",
                                 href: "/map"
                             },
-                            // {
-                            //     name: "Entertainment",
-                            //     href: "/stores"
-                            // },
-                            // {
-                            //     name: "Specialty",
-                            //     href: "/stores"
-                            // },
                             {
                                 name: "Sales & Promotions",
                                 href: "/promotions"
