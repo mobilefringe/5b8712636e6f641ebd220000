@@ -107,7 +107,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                         href: "/events-and-promotions"
                     },
                     {
-                        name: "Events & Promotions",
+                        name: "Online Offeres",
                         href: "/events-and-promotions"
                     },
                     {
