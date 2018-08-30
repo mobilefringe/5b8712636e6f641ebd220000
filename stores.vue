@@ -1,0 +1,265 @@
+<template>
+    <div> <!-- without an outer container div this component template will not render -->
+        <loading-spinner v-if="!dataLoaded"></loading-spinner>
+        <transition name="fade">
+            <div v-if="dataLoaded" v-cloak>
+        		<div class="inside_page_header">
+                    <div class="main_container position_relative">
+                        <h2>Directory</h2>
+                    </div>
+                </div>
+        		<div class="main_container">
+        		    <div class="row">
+                        <div class="col-md-12">
+                            <breadcrumb></breadcrumb>
+                        </div>
+                    </div>
+        		    <div class="row margin_40">
+        		        <div class="col-md-6 clearfix">
+        		            <button class="animated_btn stores_btn" @click="toggleView()">{{ toggleText }}</button>
+        		            <router-link to="/map">
+        		                <div class="animated_btn stores_btn">
+        		                    Center Map
+        		                </div>    
+        		            </router-link>
+        		        </div>
+        		        <div class="col-md-6 clearfix">
+        		            <div class="store_search">
+            					<search-component :list="allStores" placeholder="Search" suggestion-attribute="name" v-model="search_result" @select="onOptionSelect" class="text-left">
+            						<template slot="item" scope="option" class="manual">
+            							<article class="media">
+            								<p>{{ option.data.name }}</p>
+            							</article>
+            						</template>
+            					</search-component>
+            					<i class="fa fa-search"></i>
+            				</div> 
+            				<div class="store_category">
+            					<v-select 
+            					    v-model="selectedCat" 
+            					    :options="dropDownCats" 
+            					    :searchable="false" 
+            					    :on-change="filterByCategory" 
+            					    class="category-select" 
+            					    placeholder="Category" 
+            					    id="selectByCat"
+            				    ></v-select>
+            				</div>
+        		        </div>
+        		    </div>
+        			<!-- Logo View -->
+        			<div v-if="logoView" class="margin_60">
+            			<div v-masonry transition-duration="0.3s" item-selector=".stores-grid-item" horizontal-order="true">
+                            <transition-group name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" tag="div">
+                                <div v-masonry-tile  v-for="(store, index) in filteredStores" :key="index" class="stores-grid-item">
+                            	    <div class="store_logo_container">
+                            	        <router-link :to="'/stores/'+ store.slug">
+                                			<img class="store_img" :src="store.image_url" alt="">
+                                			<div class="store_tag" v-if="store.total_published_promos">
+            									<div class="store_tag_text">Promotion</div>
+            								</div>
+            								<div class="store_tag" v-if="!store.total_published_promos && !store.is_new_store && store.is_coming_soon_store">
+            									<div class="store_tag_text">Coming Soon</div>
+            								</div>
+            								<div class="store_tag" v-if="!store.total_published_promos && !store.is_coming_soon_store && store.is_new_store">
+            									<div class="store_tag_text">New Store</div>
+            								</div>
+            								<div class="store_details">
+            								    <div class="store_text"><h3>{{ store.name }}</h3></div>    
+            								</div>
+                                		</router-link>
+                            	    </div>
+                                </div>
+                            </transition-group>
+                        </div>
+                    </div>
+                    <!-- List View -->
+                    <div v-if="listView" class="margin_60 listView">
+                        <transition-group name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" tag="div">
+                            <div v-for="(store, index) in filteredStores" :key="index">
+                    			<div class="store_name">
+                    			    <router-link :to="'/stores/'+ store.slug">
+                    			        <p>{{ store.name }}</p>
+                    			    </router-link>
+                    			</div>
+                            </div>
+                        </transition-group>
+                    </div>
+        		</div>
+	        </div>
+	    </transition>
+	</div>
+</template>
+
+<script>
+    define(["Vue", "vuex", "vue-select", "vue!search-component", "masonry" , "vue-masonry-plugin"], function(Vue, Vuex, VueSelect, SearchComponent, masonry, VueMasonryPlugin) {
+        Vue.component('v-select', VueSelect.VueSelect);
+        Vue.use(VueMasonryPlugin.default);
+        return Vue.component("stores-m-component", {
+            template: template, // the variable template will be injected
+            data: function() {
+                return {
+                    dataLoaded: false,
+                    storeBanner : null,
+                    windowWidth: 0,
+                    selectedCat: null,
+                    filteredStores: null,
+                    search_result : null,
+                    query: "",
+                    toggleText: "Display as List",
+                    logoView: true,
+                    listView: false,
+                    dineFilter: 5962
+                }
+            },
+            created (){
+                this.loadData().then(response => {
+                    // var temp_repo = this.findRepoByName('Directory Banner').images;
+                    // if(temp_repo != null) {
+                    //     this.storeBanner = temp_repo[0];
+                    // } else {
+                    //     this.storeBanner = "http://via.placeholder.com/1920x400/4f6726/4f6726";
+                    // }
+                    
+                    this.dataLoaded = true;
+                    
+                    this.query = this.$route.query.category
+                    if(this.query == "dining_full_service"){
+                      this.selectedCat = "Dining Full Service";
+                      this.filterByCategory;
+                    } else {
+                        this.selectedCat = "All";
+                        this.filteredStores = this.allStores;
+                    }
+                });
+            },
+            watch: {
+                $route: function() {
+                    this.query = this.$route.query.category
+                    if(this.query == "dining_full_service"){
+                      this.selectedCat = "Dining Full Service";
+                      this.filterByCategory;
+                    } else {
+                        this.selectedCat = "All";
+                        this.filteredStores = this.allStores;
+                    }    
+                },
+                selectedCat: function() {
+                    this.$nextTick(function() {
+                        Vue.prototype.$redrawVueMasonry();
+                    });    
+                },
+                windowWidth: function() {
+                    if (this.windowWidth <= 768) {
+                        this.mobile_store = true;
+                    } else {
+                        this.mobile_store = false;
+                    }
+                }
+            },
+            mounted() {
+                this.$nextTick(function() {
+                    window.addEventListener('resize', this.getWindowWidth);
+                    //Init
+                    this.getWindowWidth();
+                });
+            },
+            computed: {
+                ...Vuex.mapGetters([
+                    'property',
+                    'timezone',
+                    'processedStores',
+                    'processedCategories',
+                    'storesByAlphaIndex',
+                    'storesByCategoryName',
+                    'findCategoryById',
+                    'findCategoryByName',
+                    'findRepoByName'
+                ]),
+                allStores() {
+                    var store_list = [];
+                    var vm = this;
+                    _.forEach(this.processedStores, function(value, key) {
+                        if(!_.includes(value.categories, vm.dineFilter)) {
+                            if (_.includes(value.image_url, 'missing')) {
+                                value.image_url = this.property.default_logo
+                            }
+                            store_list.push(value);
+                        }
+                    });
+                    this.filteredStores = store_list;
+                    return store_list
+                },
+                dropDownCats() {
+                    var vm = this;
+                    var store_cats = _.filter(this.processedStores, function(o) { return !_.includes(o.categories, vm.dineFilter) });
+                    var cats = [];
+                    _.forEach(store_cats, function(value, key) {
+                        _.forEach(value.categories, function(category, key) {
+                            var current_category = vm.findCategoryById(category)
+                            if(!_.includes(cats, current_category.name)) {
+                                
+                                cats.push(current_category.name)
+                            }
+                        });
+                    });
+                    cats = cats.sort();
+                    cats.unshift('All');
+                    return cats;
+                },
+                filterByCategory() {
+                    category_id = this.selectedCat;
+                    if (category_id == "All" || category_id == null || category_id == undefined) {
+                        category_id = "All";
+                    } else {
+                        category_id = this.findCategoryByName(category_id).id;
+                    }
+
+                    if (category_id == "All") {
+                        this.filteredStores = this.allStores;
+                    } else {
+                        var find = this.findCategoryById;
+                        var filtered = _.filter(this.allStores, function(o) {
+                            return _.indexOf(o.categories, _.toNumber(category_id)) > -1;
+                        });
+                        this.filteredStores = filtered;
+                    }
+                    var el = document.getElementById("selectByCat");
+                    if(el) {
+                        el.classList.remove("open");
+                    }
+                }
+            },
+            methods: {
+                loadData: async function() {
+                    try {
+                        let results = await Promise.all([this.$store.dispatch("getData", "categories"), this.$store.dispatch("getData", "repos")]);
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
+                },
+                toggleView() {
+                    if (this.logoView) {
+                        this.toggleText = "Display as Logos"
+                        this.listView = true;
+                        this.logoView = false;
+                    } else if (this.listView) {
+                        this.toggleText = "Display as List"
+                        this.logoView = true;
+                        this.listView = false;
+                    } 
+                },
+                getWindowWidth(event) {
+                    this.windowWidth = window.innerWidth;
+                },
+                onOptionSelect(option) {
+                    this.search_result = "";
+                    this.$router.push("/stores/" + option.slug);
+                }
+            },
+            beforeDestroy: function() {
+                window.removeEventListener('resize', this.getWindowWidth);
+            }
+        });
+    });
+</script>
