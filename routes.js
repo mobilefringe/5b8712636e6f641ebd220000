@@ -44,7 +44,7 @@ define([], function () {
                             name: 'coupons'
                         },
                         {
-                            path: '/coupons/my-basket',
+                            path: '/online_offers/my-basket',
                             component: view('default'),
                             children: [
                                 {
