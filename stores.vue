@@ -182,7 +182,7 @@
                     _.forEach(this.processedStores, function(value, key) {
                         if(!_.includes(value.categories, vm.dineFilter)) {
                             if (_.includes(value.image_url, 'missing')) {
-                                value.image_url = vm.property.default_logo;
+                                value.image_url = vm.property.transparent_logo;
                             }
                             store_list.push(value);
                         }
