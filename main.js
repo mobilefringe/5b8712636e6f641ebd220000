@@ -105,9 +105,9 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                                 href: "/stores?category=dining_full_service"
                             },
                             {
-                        name: "Online Offeres",
-                        href: "/online_offers"
-                    },
+                                name: "Online Offeres",
+                                href: "/online_offers"
+                            },
                             
                         ]
                     },
