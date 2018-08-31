@@ -112,7 +112,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                         ]
                     },
                     {
-                        name: "Events",
+                        name: "Events & Promotions",
                         href: "/events-and-promotions"
                     },
                     {
