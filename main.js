@@ -99,20 +99,21 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                             {
                                 name: "Center Map",
                                 href: "/map"
-                            }
-                        ]
-                    },
-                    {
-                        name: "Events & Promotions",
-                        href: "/events-and-promotions"
-                    },
-                    {
+                            },
+                            {
+                                name: "Dining",
+                                href: "/stores?category=dining_full_service"
+                            },
+                            {
                         name: "Online Offeres",
                         href: "/online_offers"
                     },
+                            
+                        ]
+                    },
                     {
-                        name: "Dine",
-                        href: "/dine"
+                        name: "Events",
+                        href: "/events-and-promotions"
                     },
                     {
                         name: "Location",
