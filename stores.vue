@@ -55,8 +55,8 @@
                             	    <div class="store_logo_container">
                             	        <router-link :to="'/stores/'+ store.slug">
                                 			<!--<img class="store_img" :src="store.image_url" alt="">-->
-                                			<div>
-                                			    <img v-if="!store.no_store_logo" class="store_img" :src="store.store_front_url_abs" alt="">
+                                			<div v-if="!store.no_store_logo">
+                                			    <img  class="store_img" :src="store.store_front_url_abs" alt="">
                                 			</div>
                                 			
                                             <div v-else class="no_logo_container">
