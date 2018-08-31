@@ -55,7 +55,10 @@
                             	    <div class="store_logo_container">
                             	        <router-link :to="'/stores/'+ store.slug">
                                 			<!--<img class="store_img" :src="store.image_url" alt="">-->
-                                			<img v-if="!store.no_store_logo" class="store_img" :src="store.store_front_url_abs" alt="">
+                                			<div>
+                                			    <img v-if="!store.no_store_logo" class="store_img" :src="store.store_front_url_abs" alt="">
+                                			</div>
+                                			
                                             <div v-else class="no_logo_container">
                                                 <img class="store_img" src="//codecloud.cdn.speedyrails.net/sites/5b8712636e6f641ebd220000/image/png/1533845184449/transparent_logo.png" alt="">
                                                 <div class="no_logo_text">
