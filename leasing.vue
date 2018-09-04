@@ -79,8 +79,9 @@
                     }
                     
                     if(response && response[1]){
-                    this.main = response[1].data;
-                    this.leasingInfo = response[1].data.subpages[0]
+                        this.main = response[1].data;
+                        if(response[1].data && response[1].data.subpages)
+                        this.leasingInfo = response[1].data.subpages[0]
                     }
                     this.dataLoaded = true;
                 });
