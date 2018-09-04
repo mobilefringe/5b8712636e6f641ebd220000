@@ -78,9 +78,10 @@
                         this.pageImages = temp_repo2.images;
                     }
                     
-                    if(response && response[1])
+                    if(response && response[1]){
                     this.main = response[1].data;
                     this.leasingInfo = response[1].data.subpages[0]
+                    }
                     this.dataLoaded = true;
                 });
             },
