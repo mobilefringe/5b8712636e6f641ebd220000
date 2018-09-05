@@ -19,7 +19,7 @@ require.config({
         'Fuse': 'https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min',
         'datastore_mutation_types': 'https://mmvue.codecloudapp.com/datastore_mutation_types',
         'datastore_getters': 'https://mmvue.codecloudapp.com/datastore_getters',
-        'datastore_actions': 'https://mmvue.codecloudapp.com/datastore_actions',
+        'datastore_actions': 'https://mmvue.codecloudapp.com/datastore_actions_test',
         'datastore_mutations': 'https://mmvue.codecloudapp.com/datastore_mutations',
         'datastore': 'https://mmvue.codecloudapp.com/datastore',
         'vuex-router-sync': 'https://mmvue.codecloudapp.com/vuex-router-sync',
