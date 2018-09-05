@@ -64,8 +64,9 @@
                     }
                     if(response && response[1]){
                         this.main = response[1].data;
-                        if(response[1].data && response[1].data.subpages && response[1].data.subpages[0]){
-                           this.address = response[1].data.subpages[0]
+                        if(response[1].data && response[1].data.subpages){
+                           this.address = response[1].data.subpages[0];
+                           this.directions = response[1].data.subpages[1]
                         }
                     }
                     this.main = response[1].data;
