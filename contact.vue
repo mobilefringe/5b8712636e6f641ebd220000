@@ -103,7 +103,7 @@
             },
             created() {
                 this.loadData().then(response => {
-                    if(response && response[1]){
+                    if(response && response[0]){
                         this.main = response[0].data
                         if(response[1].data && response[1].data.subpages){
                            this.contactInfo = response[0].data.subpages[0];
