@@ -240,7 +240,7 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData", "events"), this.$store.dispatch('LOAD_PAGE_DATA', {url: "https://peninsula.mallmaverick.com/api/v4/"+this.property.subdomain+"/social.json"})]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData", "events"), this.$store.dispatch('LOAD_PAGE_DATA', {url: "https://home.mallmaverick.com/api/v4/"+this.property.subdomain+"/social.json"})]);
                         return results;
                     } catch(e) {
                         console.log("Error loading data: " + e.message);    
