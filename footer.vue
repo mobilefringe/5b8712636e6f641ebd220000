@@ -27,7 +27,7 @@
                     <p>{{ getPropertyAddress }}</p>
                     <p v-if="property.contact_phone" class="margin_40"><a :href="'tel:' + property.contact_phone">{{ property.contact_phone }}</a></p>
                     <div class="footer_links">
-                        <p><a href="'/pages/'+{{property.subdomain}}+'-code-of-conduct'" target="_blank">Code of Conduct</a> | <a href="/pages/cerritos-privacy-policy/" target="_blank">Privacy Policy</a></p>
+                        <p><a href="'/pages/'+property.subdomain+'-code-of-conduct'" target="_blank">Code of Conduct</a> | <a href="/pages/cerritos-privacy-policy/" target="_blank">Privacy Policy</a></p>
                     </div>
                 </div>
             </div>
