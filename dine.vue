@@ -189,9 +189,8 @@
                     if (dining_cat !== null && dining_cat !== undefined) {
                        subcategories = vm.findSubcategoriesByParentID(dining_cat.id);
                     }
-                    
+                    console.log("console.log("dining_cat", subcategories);", subcategories);
                     subcategories = _.map(subcategories, 'name').sort();
-                    console.log("dining_cat", subcategories);
                     subcategories.unshift('All Cuisine');
                     return subcategories;
                 },
