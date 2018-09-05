@@ -101,7 +101,18 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.pageContent = response[0].data;
+                    var temp_repo = this.findRepoByName('Newsletter Banner');
+                    if(temp_repo != null && temp_repo != undefined) {
+                        this.pageBanner = temp_repo.images[0];
+                    } else {
+                        this.pageBanner = {
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b71eb886e6f6450013c0000/image/jpeg/1529532304000/insidebanner2.jpg"
+                        }
+                    }
+                    
+                   if(response){
+                        this.pageContent = response[0].data;
+                   }
                     this.dataLoaded = true;
                 });
             },
