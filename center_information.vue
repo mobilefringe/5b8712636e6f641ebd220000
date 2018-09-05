@@ -73,10 +73,9 @@
                         this.lowerBanner = one_img;
                     }
                     if(response && response[1]){
-                        this.main = response[1].data;
+                         this.main = response[1].data;
                         if(response[1].data && response[1].data.subpages){
-                           this.address = response[1].data.subpages[0];
-                           this.directions = response[1].data.subpages[1]
+                           this.amenities = response[1].data.subpages
                         }
                     }
                     this.main = response[1].data;
