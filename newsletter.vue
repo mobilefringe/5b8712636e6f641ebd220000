@@ -4,9 +4,11 @@
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
                 <div class="inside_page_header">
+                    <div class="inside_page_header" v-if="pageBanner" v-bind:style="{ background: 'linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(' + pageBanner.image_url + ') center center' }">
                     <div class="main_container position_relative">
                         <h2>Newsletter</h2>
                     </div>
+                </div>
                 </div>
                 <div class="main_container">
                     <div class="row">
