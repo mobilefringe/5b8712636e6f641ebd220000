@@ -18,7 +18,7 @@
                             <form class="newsletter_form form-horizontal" action="//mobilefringe.createsend.com/t/d/s/ulikhh/" method="post" @submit.prevent="validateBeforeSubmit">
                                 <div class="row">
                                     <div class="col-sm-12" >
-                                        <label for="fieldfihudt" class="accessibility">First Name</label>
+                                        <label for="fieldfihudt" class="accessibility">Full Name</label>
                                         <input v-model="form_data.name" required class="margin_20 form-control" id="fieldfihudt" name="cm-name" type="text" placeholder="First Name">
                                     </div>
                                     <!--<div class="col-sm-6" >-->
