@@ -19,7 +19,7 @@
                                 <div class="row">
                                     <div class="col-sm-12" >
                                         <label for="fieldfihudt" class="accessibility">Full Name</label>
-                                        <input v-model="form_data.name" required class="margin_20 form-control" id="fieldfihudt" name="cm-name" type="text" placeholder="First Name">
+                                        <input v-model="form_data.name" required class="margin_20 form-control" id="fieldfihudt" name="cm-name" type="text" placeholder="Full Name">
                                     </div>
                                     <!--<div class="col-sm-6" >-->
                                     <!--    <label for="fieldfihudi" class="accessibility">Last Name</label>-->
