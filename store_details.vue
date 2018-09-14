@@ -18,7 +18,7 @@
                         <div class="col-md-4">
                             <div class="sidebar">
                                 <!--<img class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />-->
-                                <div>
+                                <div id="store_dets_logo_container">
                                     <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1536094421888/default_background.png">
                     			    <img  class="store_img" :src="currentStore.store_front_url_abs" alt="">
                                 </div>
