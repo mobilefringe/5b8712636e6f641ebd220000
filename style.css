@@ -1598,6 +1598,9 @@ $anim-speed: 0.3s;
 .sidebar {
     padding-right: 30px;
 }
+#store_dets_logo_container{
+    
+}
 .store_details_image {
     margin-bottom: 20px; 
     max-width: 100%;
