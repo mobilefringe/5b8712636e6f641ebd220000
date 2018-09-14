@@ -1599,12 +1599,17 @@ $anim-speed: 0.3s;
     padding-right: 30px;
 }
 #store_dets_logo_container{
-    
+    .
 }
 .store_details_image {
     margin-bottom: 20px; 
     max-width: 100%;
     border: 1px solid #D8D8D8;
+    position:absolute;
+        top :50%;
+        left:50%;
+        transform :translate(-50%,-50%);
+        padding: 25px;
 }
 .store_details_phone, .store_details_website {
     font-size: 1.333rem;
