@@ -20,7 +20,7 @@
                                 <!--<img class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />-->
                                 <div>
                                     <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1536094421888/default_background.png">
-                                			    <img  class="store_img" :src="store.store_front_url_abs" alt="">
+                    			    <img  class="store_img" :src="store.store_front_url_abs" alt="">
                                 </div>
                                 <div class="margin_20 center" v-if="currentStore.phone">
                                     <a class="store_details_phone" :href="'tel:' + currentStore.phone">{{ currentStore.phone }}</a>    
