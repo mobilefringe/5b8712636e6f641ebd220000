@@ -44,7 +44,7 @@
 </template>
 
 <script>
-	define(["Vue", "vuex", "vue!google_map"], function(Vue, Vuex, google_map ) {
+	define(["Vue", "vuex", "vue!google_map","json!site.json"], function(Vue, Vuex, google_map, Site) {
 		return Vue.component("location-component", {
             template: template, // the variable template will be injected
             data: function () {
