@@ -80,6 +80,17 @@
             },
             created (){
                 this.loadData().then(response => {
+                    var temp_repo = this.findRepoByName('Directory Banner');
+                    if(temp_repo !== null && temp_repo !== undefined) {
+                       temp_repo = temp_repo.images;
+                       this.pageBanner = temp_repo[0];
+                    }
+                    else {
+                        this.pageBanner = {
+                            "image_url": "//codecloud.cdn.speedyrails.net/sites/5b71eb886e6f6450013c0000/image/jpeg/1529532304000/insidebanner2.jpg"
+                        }
+                    }
+                    
                     this.selectedCoupons = Cookies.get('coupon_ids');
                     this.selectedCoupons = JSON.parse(this.selectedCoupons);
                     this.dataLoaded = true;
