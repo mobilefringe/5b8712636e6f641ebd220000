@@ -78,8 +78,8 @@
                 }
             },
             created() {
-				this.$store.dispatch("getData", "coupons").then(response => {
-				    var temp_repo = this.findRepoByName('Coupons Banner');
+                this.loadData().then(response => {
+                    var temp_repo = this.findRepoByName('Coupons Banner');
                     if(temp_repo !== null && temp_repo !== undefined) {
                        temp_repo = temp_repo.images;
                        this.pageBanner = temp_repo[0];
@@ -102,6 +102,9 @@
 					if(Cookies.get('coupon_ids') !== null && Cookies.get('coupon_ids') !== undefined && Cookies.get('coupon_ids').length > 0){
                         this.selected_coupon_id = JSON.parse(Cookies.get('coupon_ids'));
                     }
+                });
+				this.$store.dispatch("getData", "coupons").then(response => {
+				    
 				}, error => {
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
 				});
