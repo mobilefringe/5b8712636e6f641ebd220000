@@ -212,7 +212,7 @@ define([], function () {
                     path: '/online_offers',
                     component: view('default'),
                     meta: {
-                        breadcrumb: 'Coupons',
+                        breadcrumb: 'Online Offers',
                     },
                     children: [
                         {
