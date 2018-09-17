@@ -101,7 +101,8 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'findCouponById'
+                    'findCouponById',
+                    'findRepoByName'
                 ]),
                 couponList: function couponsList() {
                     if (this.selectedCoupons) {
