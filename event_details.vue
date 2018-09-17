@@ -100,21 +100,6 @@
 					console.error("Could not retrieve data from server. Please check internet connection and try again.");
 				});
 			},
-			watch: {
-                currentEvent : function (){
-                    if(this.currentEvent != null) {
-                        if (this.currentEvent.eventable_type === "Store"){
-                            if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-                                this.currentEvent.image_url = this.currentEvent.store.store_front_url_abs; 
-                            }
-                        } else {
-                            if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
-                                this.currentEvent.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8712636e6f641ebd220000/image/png/1529532187000/eventsplaceholder2@2x.png";    
-                            }
-                        }
-                    }
-                }
-            },
 			computed: {
 				...Vuex.mapGetters([
 					'property',
