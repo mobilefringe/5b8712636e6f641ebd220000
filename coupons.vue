@@ -104,7 +104,8 @@
                     'property',
                     'timezone',
                     'processedCoupons',
-                    'findCouponById'
+                    'findCouponById',
+                    'findRepoByName'
                 ]),
                 couponList: function coupons() {
                     var vm = this;
