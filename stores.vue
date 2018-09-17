@@ -43,6 +43,7 @@
             					    class="category-select" 
             					    placeholder="Category" 
             					    id="selectByCat"
+            					    transition="dropdown-fade"
             				    ></v-select>
             				</div>
         		        </div>
