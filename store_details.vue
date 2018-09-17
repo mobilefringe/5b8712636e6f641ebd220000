@@ -168,9 +168,6 @@
             watch: {
                 $route: function () {
                     this.updateCurrentStore(this.$route.params.id);
-                },
-                currentStore: function () {
-                    
                 }
             },
             computed: {
