@@ -68,6 +68,7 @@
             data: function () {
                 return {
                     dataLoaded: false,
+                    pageBanner : null,
                     selectedCoupons: null,
                     events: [],
                     moreEvents: [],
