@@ -130,7 +130,7 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "coupons")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "coupons"),this.$store.dispatch("getData", "repos")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
