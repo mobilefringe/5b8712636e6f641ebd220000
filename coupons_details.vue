@@ -95,28 +95,27 @@
 						this.$router.replace({ name: 'coupons' });
 					}
 					else {
-					    if(this.currentCoupon != null) {
-                            if (this.currentCoupon.promotionable_type === "Store"){
-                                if (_.includes(this.currentCoupon.store.store_front_url_abs, 'missing')) {
-                                    this.currentCoupon.store_logo = this.property.default_logo
-                                } else {
-                                    this.currentCoupon.store_logo = this.currentCoupon.store.store_front_url_abs;
-                                }
-                                
-                                // if (_.includes(this.currentCoupon.promo_image_url_abs, 'missing')) {
-                                //     this.currentCoupon.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71fb226e6f645093080000/image/png/1529532181000/promoplaceholder2@2x.png";
-                                // } else {
-                                //     this.currentCoupon.image_url = this.currentCoupon.promo_image_url_abs
-                                // }
+                        if (this.currentCoupon.promotionable_type === "Store"){
+                            if (_.includes(this.currentCoupon.store.store_front_url_abs, 'missing')) {
+                                this.currentCoupon.store_logo = this.property.default_logo
                             } else {
-                                // if  (_.includes(this.currentCoupon.promo_image_url_abs, 'missing')) {
-                                //     this.currentCoupon.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71fb226e6f645093080000/image/png/1529532181000/promoplaceholder2@2x.png";    
-                                // }
+                                this.currentCoupon.store_logo = this.currentCoupon.store.store_front_url_abs;
                             }
-                            if(_.includes(this.selected_coupon_id, this.currentCoupon.id)){
-                                this.alreadyAdded = true;
-                            }
+                            
+                            // if (_.includes(this.currentCoupon.promo_image_url_abs, 'missing')) {
+                            //     this.currentCoupon.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71fb226e6f645093080000/image/png/1529532181000/promoplaceholder2@2x.png";
+                            // } else {
+                            //     this.currentCoupon.image_url = this.currentCoupon.promo_image_url_abs
+                            // }
+                        } else {
+                            // if  (_.includes(this.currentCoupon.promo_image_url_abs, 'missing')) {
+                            //     this.currentCoupon.image_url = "//codecloud.cdn.speedyrails.net/sites/5b71fb226e6f645093080000/image/png/1529532181000/promoplaceholder2@2x.png";    
+                            // }
                         }
+                        if(_.includes(this.selected_coupon_id, this.currentCoupon.id)){
+                            this.alreadyAdded = true;
+                        }
+                     
 					}
 					this.$breadcrumbs[2].meta.breadcrumb = this.currentCoupon.name
 					
