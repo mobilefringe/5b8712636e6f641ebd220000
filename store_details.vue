@@ -23,7 +23,7 @@
                                         <p class="store_details_name">{{ currentStore.name }}</p>
                                     </div>    
                                 </div>
-                                <div id="store_dets_logo_container" v-else >
+                                <div id="store_dets_logo_container" v-else>
                                     <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1536094421888/default_background.png">
                     			    <img  class="store_details_image" :src="currentStore.store_front_url_abs" alt="">
                                 </div>
@@ -225,6 +225,11 @@
                         this.$router.replace({ name: 'stores' });
                     }
                     else {
+                        if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
+                            this.currentStore.no_logo = true
+                        } else {
+                            this.currentStore.no_logo = false
+                        }
                         if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
                             this.currentStore.store_front_url_abs = this.property.default_logo;
                         }
