@@ -218,6 +218,63 @@
                     if (this.currentStore === null || this.currentStore === undefined) {
                         this.$router.replace({ name: 'stores' });
                     }
+                    else {
+                        if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
+                        this.currentStore.store_front_url_abs = this.property.default_logo;
+                    }
+                    
+                    var vm = this;
+                    var storeHours = [];
+                    _.forEach(this.currentStore.store_hours, function (value, key) {
+                        hours = vm.findHourById(value)
+                        today = moment().day();
+                        if( today == hours.day_of_week ){
+                            hours.todays_hours = true;
+                        } else {
+                            hours.todays_hours = false;
+                        }
+                        storeHours.push(hours);
+                    });
+                    this.storeHours = _.sortBy(storeHours, function(o) { return o.day_of_week });
+                
+                    var vm = this;
+                    var temp_promo = [];
+                    _.forEach(this.currentStore.promotions, function(value, key) {
+                        var current_promo = vm.findPromoById(value);
+                        
+                        if (_.includes(current_promo.image_url, 'missing')) {
+                            current_promo.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8712636e6f641ebd220000/image/png/1529532181000/promoplaceholder2@2x.png";
+                        }
+
+                        temp_promo.push(current_promo);
+                    }); 
+                    this.storePromotions = temp_promo;
+
+                    var vm = this;
+                    var temp_event = [];
+                    _.forEach(this.currentStore.events, function(value, key) {
+                        var current_event = vm.findEventById(value);
+                        
+                        if (_.includes(current_event.image_url, 'missing')) {
+                            current_event.image_url = "//codecloud.cdn.speedyrails.net/sites/5b8712636e6f641ebd220000/image/png/1529532187000/eventsplaceholder2@2x.png";
+                        }
+
+                        temp_event.push(current_event);
+                    }); 
+                    this.storeEvents = temp_event;
+                    
+                    var vm = this;
+                    var temp_coupon = [];
+                    _.forEach(this.currentStore.coupons, function(value, key) {
+                        var current_coupon = vm.findCouponById(value);
+                        // if (_.includes(current_coupon.image_url, 'missing')) {
+                        //     current_coupon.image_url = "http://placehold.it/1560x800/757575";
+                        // }
+
+                        temp_coupon.push(current_coupon);
+                    }); 
+                    // this.storeCoupons = temp_coupon;
+                    }
                     this.$breadcrumbs[1].meta.breadcrumb = this.currentStore.name
                 },
                 updatePNGMap(map) {
