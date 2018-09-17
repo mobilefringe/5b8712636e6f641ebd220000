@@ -18,7 +18,7 @@
                         <div class="col-md-4">
                             <div class="sidebar">
                                 <!--<img class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />-->
-                                <div v-if="currentStore.no_logo" class="store_details_image center-block">
+                                <div v-if="currentStore.no_logo" class="store_details_no_logo center-block">
                                     <div class="no_logo">
                                         <p class="store_details_name">{{ currentStore.name }}</p>
                                     </div>    
