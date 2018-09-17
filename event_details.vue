@@ -74,6 +74,7 @@
 			data: function() {
 				return {
 					dataLoaded: false,
+					pageBanner: null,
 					currentEvent: null,
 				    siteInfo: site,
 				}
