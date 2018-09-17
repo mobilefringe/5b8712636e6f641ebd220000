@@ -70,6 +70,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
+                    pageBanner:null,
                     currentCoupon: null,
                     siteInfo: site,
                     alreadyAdded: false,
