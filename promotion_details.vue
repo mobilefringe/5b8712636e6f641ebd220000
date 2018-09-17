@@ -73,6 +73,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
+                    pageBanner: null,
                     currentPromo: null,
                     siteInfo: site
                 }
