@@ -240,7 +240,7 @@ define([], function () {
                             path: ':id',
                             component: view('coupons_details'),
                             meta: {
-                                breadcrumb: 'Coupon Details',
+                                breadcrumb: 'Online Offers Details',
                             },
                             name: 'couponDetails',
                             props: true
