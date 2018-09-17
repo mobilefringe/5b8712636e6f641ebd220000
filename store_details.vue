@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div v-if="this.currentStore.promotions">
+                            <div v-if="currentStore.promotions">
                                 <h3 class="store_details_title">Current Promotions</h3>  
                                 <div class="row margin_40">
                                     <div class="col-md-6" v-if="storePromotions" v-for="item in storePromotions">
