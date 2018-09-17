@@ -103,11 +103,7 @@
                         this.selected_coupon_id = JSON.parse(Cookies.get('coupon_ids'));
                     }
                 });
-				this.$store.dispatch("getData", "coupons").then(response => {
-				    
-				}, error => {
-					console.error("Could not retrieve data from server. Please check internet connection and try again.");
-				});
+				
 			},
 			watch: {
                 currentCoupon : function (){
