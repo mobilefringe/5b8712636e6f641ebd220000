@@ -117,6 +117,7 @@
 					'timezone',
 					'processedEvents',
 					'findEventBySlug',
+					'findRepoByName'
 				])
 			},
 			methods: {
