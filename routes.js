@@ -245,30 +245,7 @@ define([], function () {
                             name: 'map'
                         }
                     ]
-                },
-                {
-                    path: '/promotions',
-                    component: view('default'),
-                    meta: {
-                        breadcrumb: 'Sales & Promotions',
-                    },
-                    children: [
-                        {
-                            path: '',
-                            component: view('promotions'),
-                            name: 'promotions'
-                        },
-                        {
-                            path: ':id',
-                            component: view('promotion_details'),
-                            meta: {
-                                breadcrumb: 'Promotion Details',
-                            },
-                            name: 'promotionDetails',
-                            props: true
-                        }
-                    ]
-                },
+                }
             ]
         },
         {
