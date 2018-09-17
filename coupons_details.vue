@@ -70,7 +70,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    pageBanner:null,
+                    pageBanner: null,
                     currentCoupon: null,
                     siteInfo: site,
                     alreadyAdded: false,
@@ -136,7 +136,8 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'findCouponBySlug'
+                    'findCouponBySlug',
+                    'findRepoByName'
                 ])
             },
             methods: {
