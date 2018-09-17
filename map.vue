@@ -66,6 +66,7 @@
                 return {
                     dataLoaded: false,
                     selectedCat: null,
+                    pageBanner : null,
                     filteredStores: null,
                     suggestionAttribute: "name",
                     storeSearch: null,
@@ -74,7 +75,7 @@
             },
             created (){
                 this.loadData().then(response => {
-                    var repo = this.findRepoByName('Location Banner');
+                    var repo = this.findRepoByName('Map Banner');
                     if(repo !== null && repo !== undefined) {
                        repo = repo.images;
                        this.pageBanner = repo[0];
