@@ -211,7 +211,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                     this.property.mm_host = this.property.mm_host.replace("http:", "");
                     this.property.default_logo = "//codecloud.cdn.speedyrails.net/sites/5b8712636e6f641ebd220000/image/png/1535663634494/peninsula-defaultlogo.png";
                     this.property.subdomain = "peninsula";
-                    let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores")]);
+                    let results = await Promise.all([this.$store.dispatch("INITIALIZE_LOCALE"), this.$store.dispatch("getData", "hours"), this.$store.dispatch("getData", "stores"), this.$store.dispatch("getData", "repos")]);
                     // await Promise.all([this.$store.dispatch("LOAD_META_DATA")]);
                     return results;
                 } catch (e) {
