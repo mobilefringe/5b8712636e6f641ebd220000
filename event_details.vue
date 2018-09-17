@@ -37,8 +37,8 @@
                             <div class="col-md-12">
                                 <div class="row margin_30">
                                     <div class="col-md-12">
-                                        <router-link to="/events">
-                    		                <div class="animated_btn pull-left">Back to Events</div>    
+                                        <router-link to="/events-and-promotions">
+                    		                <div class="animated_btn pull-left">Back to Events & Promotions</div>    
                     		            </router-link>    
                                     </div>
                                 </div>
