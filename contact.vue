@@ -95,6 +95,7 @@
             data: function data() {
                 return {
                     dataLoaded: false,
+                    pageBanner: null,
                     main: null,
                     contactInfo: null,
                     form_data: {},
