@@ -230,9 +230,9 @@
                         } else {
                             this.currentStore.no_logo = false
                         }
-                        if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
-                            this.currentStore.store_front_url_abs = this.property.default_logo;
-                        }
+                        // if (_.includes(this.currentStore.store_front_url_abs, 'missing')) {
+                        //     this.currentStore.store_front_url_abs = this.property.default_logo;
+                        // }
                         
                         var vm = this;
                         var storeHours = [];
