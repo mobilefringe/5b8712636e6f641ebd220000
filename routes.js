@@ -75,29 +75,29 @@ define([], function () {
                 }
             ]
         },
-        {
-            path: '/events',
-            component: view('default'),
-            meta: {
-                breadcrumb: 'Events',
-            },
-            children: [
-                {
-                    path: '',
-                    component: view('events'),
-                    name: 'events'
-                },
-                {
-                    path: ':id',
-                    component: view('event_details'),
-                    meta: {
-                        breadcrumb: 'Event Details',
-                    },
-                    name: 'eventDetails',
-                    props: true
-                }
-            ]
-        },
+        // {
+        //     path: '/events',
+        //     component: view('default'),
+        //     meta: {
+        //         breadcrumb: 'Events',
+        //     },
+        //     children: [
+        //         {
+        //             path: '',
+        //             component: view('events'),
+        //             name: 'events'
+        //         },
+        //         {
+        //             path: ':id',
+        //             component: view('event_details'),
+        //             meta: {
+        //                 breadcrumb: 'Event Details',
+        //             },
+        //             name: 'eventDetails',
+        //             props: true
+        //         }
+        //     ]
+        // },
         {
             path: '/events-and-promotions',
             component: view('default'),
@@ -240,7 +240,7 @@ define([], function () {
                             path: ':id',
                             component: view('coupons_details'),
                             meta: {
-                                breadcrumb: 'Online Offers Details',
+                                breadcrumb: 'Online Offer Details',
                             },
                             name: 'couponDetails',
                             props: true
