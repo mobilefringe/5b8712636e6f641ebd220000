@@ -87,7 +87,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "vue-meta", "vee-validate", "json!site.json"], function (Vue, Vuex, Meta, VeeValidate, site) {
+    define(["Vue", "vuex", "vue-meta", "vee-validate", "json!site.json"], function (Vue, Vuex, Meta, VeeValidate, Site) {
         Vue.use(Meta);
         Vue.use(VeeValidate);
         return Vue.component("contact-component", {
