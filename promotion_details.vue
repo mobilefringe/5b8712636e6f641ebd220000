@@ -36,9 +36,9 @@
                             <div class="col-md-12">
                                 <div class="row margin_30">
                                     <div class="col-md-12">
-                                        <router-link to="/promotions">
-                    		                <div class="animated_btn pull-left">Back to Sales & Promotions</div>    
-                    		            </router-link>    
+                                        <router-link to="/events-and-promotions">
+                    		                <div class="animated_btn pull-left">Back to Events & Promotions</div>    
+                    		            </router-link>   
                                     </div>
                                 </div>
                                 <social-sharing v-if="currentPromo" :url="shareURL(currentPromo.slug)" :title="currentPromo.name" :description="currentPromo.description" :quote="truncate(currentPromo.description)" :twitter-user="siteInfo.twitterHandle" :media="currentPromo.image_url" inline-template>
