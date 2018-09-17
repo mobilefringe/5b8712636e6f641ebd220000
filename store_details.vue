@@ -18,7 +18,12 @@
                         <div class="col-md-4">
                             <div class="sidebar">
                                 <!--<img class="store_details_image center-block" :src="currentStore.store_front_url_abs" :alt="currentStore.name + ' Logo'" />-->
-                                <div id="store_dets_logo_container">
+                                <div v-if="currentStore.no_logo" class="store_details_image center-block">
+                                    <div class="no_logo">
+                                        <p class="store_details_name">{{ currentStore.name }}</p>
+                                    </div>    
+                                </div>
+                                <div id="store_dets_logo_container" v-else >
                                     <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/5b1550796e6f641cab010000/image/png/1536094421888/default_background.png">
                     			    <img  class="store_details_image" :src="currentStore.store_front_url_abs" alt="">
                                 </div>
@@ -209,7 +214,7 @@
             methods: {
                 loadData: async function () {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "stores"), this.$store.dispatch("getData","events"), this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData","coupons"), this.$store.dispatch("getData", "repos"), ]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "stores"), this.$store.dispatch("getData","events"), this.$store.dispatch("getData","promotions"), this.$store.dispatch("getData","coupons"), this.$store.dispatch("getData", "repos")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
