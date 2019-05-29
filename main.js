@@ -132,6 +132,10 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                                 name: "Contact Us",
                                 href: "/contact-us"
                             },
+                            {
+                               name: "Jobs",
+                               href: "/jobs"
+                            },
                             // {
                             //     name: "Coupons",
                             //     href: "/coupons"
