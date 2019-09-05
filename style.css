@@ -1421,17 +1421,25 @@ $anim-speed: 0.3s;
     text-transform: initial;
 }
 .store_search {
-    width: 208px;
-    height: 30px;
+    width: 215px;
+    height: 35px;
     position: relative;
     float: right;
     background: #ebebeb;
+    .control {
+        border: 1px solid #ebebeb;
+    }
+    input#search_box {
+        padding: 0 0 0 10px;
+        height: 33px;
+        border: none;
+    }
     #searchComponentInput {
         padding: 0 13px;
-        height: 28px;
+        height: 33px;
         border: none;
         background: transparent;
-        font-size: 0.8125rem;
+        // font-size: 0.8125rem;
         line-height: normal;
         color: #555;
     }
@@ -1442,7 +1450,7 @@ $anim-speed: 0.3s;
         position: absolute;
         top: 8px;
         right: 10px;
-        font-size: 0.875rem;
+        // font-size: 0.875rem;
         line-height: normal;
         color: #555;
     }
@@ -1460,7 +1468,7 @@ $anim-speed: 0.3s;
             color: #555;
             p {
                 margin: 0;
-                font-size: 0.8125rem;
+                // font-size: 0.8125rem;
                 line-height: normal;
                 transition: all 0.3s ease;
             }
@@ -1474,7 +1482,7 @@ $anim-speed: 0.3s;
 .store_category {
     margin-right: 30px;
     width: 208px;
-    height: 30px;
+    height: 35px;
     position: relative;
     float: right;
     background: #ebebeb;
@@ -1482,10 +1490,10 @@ $anim-speed: 0.3s;
         .dropdown-toggle {
             border: none; 
             .form-control {
-                height: 30px;
+                height: 35px;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 300;
-                font-size: 0.8125rem !important;
+                // font-size: 0.8125rem !important;
                 line-height: normal !important;
                 color: #555; 
             }
@@ -1500,14 +1508,14 @@ $anim-speed: 0.3s;
         }
         .dropdown-menu {
             padding: 0;
-            top: 30px;
+            top: 35px;
             border-radius: 0 !important;
             border: none;
             border-top: 1px solid #555;
             background: #ebebeb;
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
-            font-size: 0.8125rem !important;
+            font-size: 1rem !important;
             line-height: normal !important;
             color: #555; 
         }
@@ -1517,19 +1525,25 @@ $anim-speed: 0.3s;
         .selected-tag {
             margin: 0;
             padding: 8px 10px;
-            height: 30px;
+            height: 34px;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
             position: absolute;
             left: 0;
             border: none;
             border-radius: 0;
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
-            font-size: 0.8125rem;
+            // font-size: 0.8125rem;
             line-height: normal;
             color: #555; 
         }  
         li > a {
             padding: 8px 10px;
+            width: 208px;
+            white-space: normal;
             line-height: normal;
         }
     }
