@@ -795,7 +795,7 @@ img{
     z-index: 1;
     border: none;
     background: $primary;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     line-height: normal;
     color: #FFF;
     text-align: center;
