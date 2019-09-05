@@ -331,6 +331,7 @@ img{
                 color: #FFF;
                 a:hover {
                     color: #FFF;
+                    text-decoration: underline;
                 }
             	&:hover, &:active, &:focus, &:visited {
             	    background: $primary;
