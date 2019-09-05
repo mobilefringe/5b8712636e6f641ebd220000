@@ -1766,7 +1766,7 @@ $anim-speed: 0.3s;
     margin-bottom: 20px;
     padding: 0;
     list-style-type: none;
-    font-size: 1.083rem;
+    //font-size: 1.083rem;
     line-height: normal;
     li {
         margin-bottom: 20px;
