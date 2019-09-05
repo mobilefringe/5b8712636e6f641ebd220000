@@ -330,11 +330,10 @@ img{
                 line-height: normal;
                 color: #FFF;
                 a:hover {
-                    color: inherit;
+                    color: $primary;
                 }
             	&:hover, &:active, &:focus, &:visited {
             	    background: $primary;
-            	    color: $secondary;
             	}
             }
         }
