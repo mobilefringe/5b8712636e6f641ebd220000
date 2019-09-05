@@ -1205,16 +1205,23 @@ $anim-speed: 0.3s;
 /* *** MAP *** */
 .map_search {
     margin-bottom: 10px;
-    width: 170px;
-    height: 30px;
+    height: 35px;
     position: relative;
     background: #ebebeb;
+    .control {
+        border: 1px solid #ebebeb;
+    }
+    input#search_box {
+        padding: 0 0 0 10px;
+        width: 100%;
+        height: 33px;
+        border: none;
+    }
     #searchComponentInput {
         padding: 0 13px;
-        height: 28px;
+        height: 33px;
         border: none;
         background: transparent;
-        font-size: 0.8125rem;
         line-height: normal;
         color: #555;
     }
@@ -1225,7 +1232,6 @@ $anim-speed: 0.3s;
         position: absolute;
         top: 8px;
         right: 10px;
-        font-size: 0.875rem;
         line-height: normal;
         color: #555;
     }
@@ -1243,7 +1249,6 @@ $anim-speed: 0.3s;
             color: #555;
             p {
                 margin: 0;
-                font-size: 0.8125rem;
                 line-height: normal;
                 transition: all 0.3s ease;
             }
@@ -1256,18 +1261,16 @@ $anim-speed: 0.3s;
 }
 .map_category {
     margin-bottom: 10px;
-    width: 170px;
-    height: 30px;
+    height: 35px;
     position: relative;
     background: #ebebeb;
     .v-select {
         .dropdown-toggle {
             border: none; 
             .form-control {
-                height: 30px;
+                height: 35px;
                 font-family: 'Montserrat', sans-serif;
                 font-weight: 300;
-                font-size: 0.8125rem !important;
                 line-height: normal !important;
                 color: #555; 
             }
@@ -1282,14 +1285,14 @@ $anim-speed: 0.3s;
         }
         .dropdown-menu {
             padding: 0;
-            top: 30px;
+            top: 35px;
             border-radius: 0 !important;
             border: none;
             border-top: 1px solid #555;
             background: #ebebeb;
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
-            font-size: 0.8125rem !important;
+            font-size: 1rem !important;
             line-height: normal !important;
             color: #555; 
         }
@@ -1299,8 +1302,8 @@ $anim-speed: 0.3s;
         .selected-tag {
             margin: 0;
             padding: 8px 10px;
-            width: 160px;
-            height: 30px;
+            height: 34px;
+            max-width: 86%;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -1310,12 +1313,13 @@ $anim-speed: 0.3s;
             border-radius: 0;
             font-family: 'Montserrat', sans-serif;
             font-weight: 300;
-            font-size: 0.8125rem;
             line-height: normal;
             color: #555; 
         }  
         li > a {
             padding: 8px 10px;
+            width: 167px;
+            white-space: normal;
             line-height: normal;
         }
     }
@@ -1324,16 +1328,15 @@ $anim-speed: 0.3s;
     margin-top: 0;
 }
 .store_list_container {
-    max-width: 170px;
     max-height: 542px;
     overflow-y: scroll;
     .store_name {
-        margin: 7px 0;
+        margin: 3px 0;
+        padding: 3px 0 3px 5px ;
         transition: all 0.3s ease;
         &:hover {
-            font-weight: 500;
-            color: $primary;
-            cursor:pointer;
+            cursor: pointer;
+            background-color: rgba(59, 129, 120, .7);
         }
     }
 }
