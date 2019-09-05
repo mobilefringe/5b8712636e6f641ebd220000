@@ -330,7 +330,7 @@ img{
                 line-height: normal;
                 color: #FFF;
                 a:hover {
-                    color: $primary;
+                    color: #FFF;
                 }
             	&:hover, &:active, &:focus, &:visited {
             	    background: $primary;
