@@ -1959,6 +1959,23 @@ $anim-speed: 0.3s;
             margin: 20px 0 0 0;
             padding: 0;
         }
+        .mobile_social_icon_container {
+           margin: 50px auto 0 auto;
+           max-width: 300px;
+           text-align: center;
+           .social_title {
+               color: #FFF;
+               text-transform: uppercase;
+           }
+           .social_icon {
+               padding: 0 5px;
+               .fab {
+                   font-size: 2.5rem;
+                   color: #FFF;
+                   transition: all 0.3s ease;
+               }
+           }
+       }
     }
     #mobile_nav ul .menu_item {
         // padding: 12px 0;
