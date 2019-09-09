@@ -435,6 +435,9 @@ img{
             .fab {
                 font-size: 2rem;
             }
+            a:hover {
+                color: #dbdbc2;
+            }
         }
         .footer_links {
             p {
