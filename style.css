@@ -330,13 +330,15 @@ img{
                 font-size: 0.875rem;
                 line-height: normal;
                 color: #FFF;
-                a:hover {
-                    color: #FFF;
-                    text-decoration: underline;
-                }
-            	&:hover, &:active, &:focus, &:visited {
-            	    background: $primary;
+                &:hover, &:active, &:focus, &:visited {
+            	    background: $secondary;
             	}
+            	p {
+            	    margin: 0;
+            	}
+            	a:hover {
+                    color: #FFF;
+                }
             }
         }
     }
