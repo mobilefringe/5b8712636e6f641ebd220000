@@ -755,7 +755,7 @@ img{
 }
 .page-breadcrumb {
     margin-bottom: 60px;
-    font-size: 0.8rem;
+    font-size: 0.875rem;
     line-height: normal;
     color: $primary;
     .breadcrumbs {
