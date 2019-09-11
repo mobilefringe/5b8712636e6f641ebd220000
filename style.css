@@ -502,7 +502,7 @@ img{
         position: absolute;
         top: 0;
         right: 0;
-        background-color: rgba(50, 156, 156, .7);
+        background-color: rgba(50, 156, 156, .9);
         .banner_content {
             min-width: 500px;
             position: absolute;
@@ -519,7 +519,6 @@ img{
                 font-size: 1.083rem;
                 line-height: normal;
                 letter-spacing: 0.01rem;
-                color: $primary;
                 text-transform: uppercase;
             }
             .banner_title {
