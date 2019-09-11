@@ -40,7 +40,7 @@
                 </div>
                 <div class="location_image_container">
                     <div v-if="lowerBanner">
-                        <div class="location_banner" v-bind:style="{ background: 'linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(' + lowerBanner.image_url + ') center center fixed #6e7b42' }"></div>
+                        <div class="location_banner" v-bind:style="{ color: 'black' background: 'linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(' + lowerBanner.image_url + ') center center fixed #6e7b42' }"></div>
                         <h1 v-if="lowerBanner.name">{{ lowerBanner.name }}</h1>
                     </div>
                 </div>
