@@ -511,7 +511,7 @@ img{
             -webkit-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-            color: #FFF;
+            color: #000;
             text-align: center;
             .banner_heading {
                 padding: 0 5px;
