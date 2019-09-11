@@ -547,9 +547,9 @@ img{
                 padding: 7px 30px;
                 display: inline-block;
                 border: 1px solid $secondary;
-                background: transparent;
+                background: $secondary;
                 font-size: 0.9rem;
-                color: $secondary;    
+                color: #FFF;    
                 text-transform: uppercase;
                 transition: all 0.3s ease;
                 &:hover {
