@@ -11,7 +11,7 @@
                                 <div class="banner_image" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>
                                 <div class="banner_content_container">
                                     <div class="banner_content">
-                                        <span class="banner_heading">Dining</span>
+                                        <span v-if="banner.heading" class="banner_heading">{{ banner.heading }}</span>
                                         <h1 class="banner_title">{{ banner.name }}</h1>
                                         <p class="banner_text">{{ banner.description }}</p>
                                         <a :href="banner.url">
