@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div v-if="this.currentStore.coupons">
+                            <div v-if="this.currentStore.coupons.length > 0">
                                 <h3 class="store_details_title">Current Coupons</h3> 
                                 <div class="row margin_40">
                                     <div class="col-md-6" v-if="storeCoupons" v-for="item in storeCoupons">
@@ -222,7 +222,6 @@
                 },
                 updateCurrentStore(id) {
                     this.currentStore = this.findStoreBySlug(id);
-                    console.log(this.currentStore)
                     if (this.currentStore === null || this.currentStore === undefined) {
                         this.$router.replace({ name: 'stores' });
                     }
