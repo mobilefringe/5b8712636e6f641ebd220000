@@ -70,16 +70,16 @@ define([], function () {
                 {
                     path: '/newsletter',
                     component: view('default'),
-                    children: [
-                        {
-                            path: '',
-                            component: view('newsletter'),
-                            meta: {
+                    // children: [
+                    //     {
+                    //         path: '',
+                    //         component: view('newsletter'),
+                    //         meta: {
                                 breadcrumb: 'Newsletter Sign-Up',
-                            },
+                            // },
                             name: 'newsletter'
-                        }
-                    ]
+                    //     }
+                    // ]
                 },
             ]
         },
