@@ -19,16 +19,16 @@ define([], function () {
                 {
                     path: '/contact-us',
                     component: view('default'),
-                    children: [
-                        {
-                            path: '',
-                            component: view('contact'),
-                            meta: {
-                                breadcrumb: 'Contact Us'
-                            },
+                    // children: [
+                    //     {
+                    //         path: '',
+                    //         component: view('contact'),
+                    //         meta: {
+                    //             breadcrumb: 'Contact Us'
+                    //         },
                             name: 'contact'
-                        }
-                    ]
+                        // }
+                    // ]
                 },
                 {
                    path: '/jobs',
