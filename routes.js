@@ -18,7 +18,7 @@ define([], function () {
                 },
                 {
                     path: '/contact-us',
-                    component: view('default'),
+                    component: view('contact'),
                     // children: [
                     //     {
                     //         path: '',
