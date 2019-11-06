@@ -286,7 +286,7 @@
     
                             temp_coupon.push(current_coupon);
                         }); 
-                        // this.storeCoupons = temp_coupon;
+                        this.storeCoupons = temp_coupon;
                     }
                     this.$breadcrumbs[1].meta.breadcrumb = this.currentStore.name
                 },
