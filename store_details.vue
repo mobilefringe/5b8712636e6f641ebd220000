@@ -34,7 +34,7 @@
                                 <div class="margin_20 center" v-if="currentStore.website">
                                     <a class="store_details_phone" :href="'//' + currentStore.website" target="_blank">Website</a>
                                 </div>
-                                <ul v-if="storeHours && storeHours.length > 0" class="store_details_hours_list">
+                                <ul v-if="storeHours.length > 0" class="store_details_hours_list">
                                     <li v-for="hour in storeHours" :class="{ today: hour.todays_hours }">
                                         <div v-if="!hour.is_closed">
                                             <span class="hours_list_day">{{hour.day_of_week | moment("dddd", timezone)}} </span><span class="hours_list_time">{{hour.open_time | moment("h:mma", timezone)}} - {{hour.close_time | moment("h:mma", timezone)}}</span>
@@ -94,7 +94,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div v-if="this.currentStore.coupons.length > 0">
+                            <div v-if="this.currentStore.coupons && this.currentStore.coupons.length > 0">
                                 <h3 class="store_details_title">Current Coupons</h3> 
                                 <div class="row margin_40">
                                     <div class="col-md-6" v-if="storeCoupons" v-for="item in storeCoupons">
