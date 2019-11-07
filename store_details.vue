@@ -98,9 +98,9 @@
                                 <h3 class="store_details_title">Current Coupons</h3> 
                                 <div class="row margin_40">
                                     <div class="col-md-6" v-if="storeCoupons" v-for="item in storeCoupons">
-                                        <div class="feature_item_container store_coupon_img">
+                                        <div class="feature_item_container">
                                 	        <router-link class="tile" :to="{ name: 'couponDetails', params: { id: item.slug }}">
-                                    			<img :src="item.image_url" :alt="item.name">
+                                    			<img class="store_coupon_img" :src="item.image_url" :alt="item.name">
                                 				<div class="details">
                         					    	<span class="title">
                         					            <h3>{{ item.name }}</h3>
