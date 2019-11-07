@@ -38,14 +38,12 @@
                 		                <div @click="printPage()" class="animated_btn coupon_detail_btn pull-left">Print Coupon</div>
                                     </div>
                                 </div>
-                                <social-sharing v-if="currentCoupon" :url="shareURL(currentCoupon.slug)" :title="currentCoupon.title" :description="currentCoupon.body" :quote="truncate(currentCoupon.body)" :twitter-user="siteInfo.twitterHandle" :media="currentCoupon.image_url" inline-template>
+                                <social-sharing v-if="currentCoupon" :url="shareURL(currentCoupon.slug)" :title="currentCoupon.title" :description="currentCoupon.body" :quote="truncate(currentCoupon.body)" :media="currentCoupon.image_url" inline-template>
                                     <div class="social_share margin_60">
                                         <network network="facebook">
                                             <i class="fab fa-facebook"></i>
                                         </network>
-                                        <network network="twitter">
-                                            <i class="fab fa-twitter"></i>
-                                        </network>
+                                    
                                         <network network="email">
                                             <i class="fas fa-envelope"></i>
                                         </network>
@@ -115,7 +113,6 @@
                         if(_.includes(this.selected_coupon_id, this.currentCoupon.id)){
                             this.alreadyAdded = true;
                         }
-                     
 					}
 					this.$breadcrumbs[2].meta.breadcrumb = this.currentCoupon.name
 					
