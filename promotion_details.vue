@@ -41,7 +41,7 @@
                     		            </router-link>   
                                     </div>
                                 </div>
-                                <social-sharing v-if="currentPromo" :url="shareURL(currentPromo.slug)" :title="currentPromo.name" :description="currentPromo.description" :quote="truncate(currentPromo.description)" :twitter-user="siteInfo.twitterHandle" :media="currentPromo.image_url" inline-template>
+                                <social-sharing v-if="currentPromo" :url="shareURL(currentPromo.slug)" :title="currentPromo.name" :description="currentPromo.description" :quote="truncate(currentPromo.description)" :media="currentPromo.image_url" inline-template>
                                     <div class="social_share margin_60">
                                         <network network="facebook">
                                             <i class="fab fa-facebook"></i>
