@@ -43,7 +43,7 @@
                                         	<h4>{{ item.name_short }}</h4>
                                         	<p class="coupon_dates"><span v-if="isMultiDay(item)">{{ item.start_date | moment("MM/DD/YYYY", timezone)}} - {{ item.end_date | moment("MM/DD/YYYY", timezone)}}</span><span v-else>{{ item.start_date | moment("MM/DD/YYYY", timezone)}}</span></p>
                                             <router-link :to="{ name: 'couponDetails', params: { id: item.slug }}">
-                                                <p class="event_link">Coupon Details <i class="fas fa-angle-double-right"></i></p>
+                                                <p class="event_link coupon_link">Coupon Details <i class="fas fa-angle-double-right"></i></p>
                                             </router-link>
                                         </div>
                                     </div>
