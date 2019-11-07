@@ -42,7 +42,7 @@
                     		            </router-link>    
                                     </div>
                                 </div>
-                                <social-sharing v-if="currentEvent" :url="shareURL(currentEvent.slug)" :title="currentEvent.name" :description="currentEvent.description" :quote="truncate(currentEvent.description)" :twitter-user="siteInfo.twitterHandle" :media="currentEvent.image_url" inline-template>
+                                <social-sharing v-if="currentEvent" :url="shareURL(currentEvent.slug)" :title="currentEvent.name" :description="currentEvent.description" :quote="truncate(currentEvent.description)"  :media="currentEvent.image_url" inline-template>
                                     <div class="social_share">
                                         <network network="facebook">
                                             <i class="fab fa-facebook"></i>
