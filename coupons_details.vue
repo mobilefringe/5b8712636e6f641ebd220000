@@ -43,7 +43,9 @@
                                         <network network="facebook">
                                             <i class="fab fa-facebook"></i>
                                         </network>
-                                    
+                                        <network network="twitter">
+                                            <i class="fab fa-twitter"></i>
+                                        </network>
                                         <network network="email">
                                             <i class="fas fa-envelope"></i>
                                         </network>
