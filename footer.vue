@@ -28,7 +28,7 @@
                     <p v-if="property.contact_phone" class="margin_40"><a :href="'tel:' + property.contact_phone">{{ property.contact_phone }}</a></p>
                     
                     <div class="footer_links">
-                        <p><a :href="'/pages/'+siteInfo.subdomain+'-privacy-policy/'" target="_blank">Privacy Policy</a></p>
+                        <p><a :href="'/pages/'+siteInfo.subdomain+'-privacy-policy/'" >Privacy Policy</a></p>
                         <!--<a :href="'/pages/'+siteInfo.subdomain+'-code-of-conduct'" target="_blank">Code of Conduct</a> | -->
                     </div>
                 </div>
