@@ -73,12 +73,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div v-if="currentStore.promotions">
+                            <div v-if="this.currentStore.promotions">
                                 <h3 class="store_details_title">Current Promotions</h3>  
                                 <div class="row margin_40">
                                     <div class="col-md-6" v-if="storePromotions" v-for="item in storePromotions">
                                         <div class="feature_item_container">
-                                	        <router-link class="tile" :to="{ name: 'promoDetails', params: { id: item.slug }}">
+                                	        <router-link class="tile" :to="{ name: 'promotionDetails', params: { id: item.slug }}">
                                     			<img :src="item.image_url" :alt="item.name">
                                 				<div class="details">
                         					    	<span class="title">
