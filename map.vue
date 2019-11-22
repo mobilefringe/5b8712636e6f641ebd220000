@@ -44,8 +44,8 @@
                                 </search-component>
                                 <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
-                            <ul class="store_list_container" v-if="filteredStores" tabindex="0" role="listbox">
-                                <li class="store_name" v-for="store in filteredStores" v-on:click="dropPin(store)" v-on:keyup.enter="dropPin(store)" role="listitem" aria-selected="false">{{store.name}}</li>
+                            <ul class="store_list_container" v-if="filteredStores" tabindex="0" role="listbox" id="listbox1" aria-labelledby="listbox1label" aria-activedescendant="listbox1-1">
+                                <li class="store_name" v-for="(store, index) in filteredStores" v-on:click="dropPin(store)" v-on:keyup.enter="dropPin(store)" role="option" :id="'listbox1-' + index" aria-selected="false">{{store.name}}</li>
                             </ul>
                         </div>
                         <div class="col-md-9">
