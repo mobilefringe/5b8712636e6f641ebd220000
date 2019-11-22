@@ -1,11 +1,11 @@
 <template>
-    <div> <!-- without an outer container div this component template will not render -->
+    <main> <!-- without an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
                 <div class="inside_page_header" v-if="pageBanner" v-bind:style="{ background: 'linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(' + pageBanner.image_url + ') center center' }">
                     <div class="main_container position_relative">
-                        <h2>Center Map</h2>
+                        <h1>Center Map</h1>
                     </div>
                 </div>
                 <div class="main_container">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </transition>
-    </div>
+    </main>
 </template>
 <script>
     define(["Vue", "vuex", "vue-select", "vue!search-component", "vue!mapplic-png-map"], function(Vue, Vuex, VueSelect, SearchComponent, MapplicComponent) {
