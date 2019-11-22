@@ -6,8 +6,7 @@
                     <div class="col-md-12">
                         <div class="social_icon_container">
     					    <span class="social_icon" v-for="item in social_media">
-                                <a :href="item.url" target="_blank">
-                                    <p class="accessibility">{{item.name}}</p>
+                                <a :href="item.url" target="_blank" :aria-label="'Follow Us on ' + item.name">
                                     <i :class="item.iconClass" aria-hidden="true"></i>
                                 </a>
                             </span>
