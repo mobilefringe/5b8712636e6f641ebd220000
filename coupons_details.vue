@@ -22,7 +22,7 @@
                             <div class="col-md-10">
                                 <p v-if="currentCoupon.store" class="event_store_name">{{ currentCoupon.store.name }}</p>
                                 <p v-else class="event_store_name">{{ property.name }}</p>
-                                <h4 class="event_name">{{ currentCoupon.name }}</h4>
+                                <h2 class="event_name">{{ currentCoupon.name }}</h2>
                                 <p class="event_dates">
                                     <span v-if="isMultiDay(currentCoupon)">{{ currentCoupon.start_date | moment("MM/DD/YYY", timezone)}} - {{ currentCoupon.end_date | moment("MM/DD/YYY", timezone)}}</span>
                                     <span v-else>{{ currentCoupon.start_date | moment("MM/DD/YYY", timezone)}}</span>
