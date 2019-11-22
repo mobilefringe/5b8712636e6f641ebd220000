@@ -229,59 +229,45 @@ define([], function () {
                             name: 'map'
                         }
                     ]
+                }
+            ]
+        },
+        {
+            path: '/online-offers',
+            component: view('default'),
+            meta: {
+                breadcrumb: 'Online Offers',
+            },
+            children: [
+                {
+                    path: '',
+                    component: view('coupons'),
+                    
+                    name: 'coupons'
                 },
                 {
-                    path: '/online-offers',
+                    path: '/online-offers/my-basket',
                     component: view('default'),
-                    meta: {
-                        breadcrumb: 'Online Offers',
-                    },
                     children: [
                         {
                             path: '',
-                            component: view('coupons'),
-                            
-                            name: 'coupons'
-                        },
-                        {
-                            path: '/online-offers/my-basket',
-                            component: view('default'),
-                            children: [
-                                {
-                                    path: '',
-                                    component: view('coupon_basket'),
-                                    meta: {
-                                        breadcrumb: 'My Basket',
-                                    },
-                                    name: 'couponBasket',
-                                    props: true
-                                }
-                            ]
-                        },
-                        {
-                            path: ':id',
-                            component: view('coupons_details'),
+                            component: view('coupon_basket'),
                             meta: {
-                                breadcrumb: 'Online Offer Details',
+                                breadcrumb: 'My Basket',
                             },
-                            name: 'couponDetails',
+                            name: 'couponBasket',
                             props: true
                         }
                     ]
                 },
-            ]
-        },
-        {
-            path: '/test',
-            component: view('default'),
-            children: [
                 {
-                    path: '',
-                    component: view('test'),
+                    path: ':id',
+                    component: view('coupons_details'),
                     meta: {
-                        breadcrumb: 'Leasing'
+                        breadcrumb: 'Online Offer Details',
                     },
-                    name: 'test'
+                    name: 'couponDetails',
+                    props: true
                 }
             ]
         },
