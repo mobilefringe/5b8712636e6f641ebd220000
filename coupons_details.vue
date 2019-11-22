@@ -116,7 +116,7 @@
                             this.alreadyAdded = true;
                         }
 					}
-					this.$breadcrumbs[2].meta.breadcrumb = this.currentCoupon.name
+					this.$breadcrumbs[1].meta.breadcrumb = this.currentCoupon.name
 					
 					this.dataLoaded = true;
 					
