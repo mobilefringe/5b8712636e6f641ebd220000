@@ -5,9 +5,9 @@
                 <div class="row main_container">
                     <div class="col-md-12 center-block">
                         <span>Sign up to receive the latest deals and news!</span>
-                        <label for="userName" class="accessibility">Enter Name</label>
+                        <label for="userName" class="visuallyhidden">Enter Name</label>
                         <input id="userName" v-model="newsletter_name" type="text" placeholder="Name*" class="newsletter_control" required />
-                        <label for="emailAddress" class="accessibility">Enter Email Address</label>
+                        <label for="emailAddress" class="visuallyhidden">Enter Email Address</label>
                         <input id="emailAddress" v-model="newsletter_email" type="text" placeholder="Email*" class="newsletter_control" required />
                         <button @click="newsletterRoute" class="animated_btn">Sign Up</button>
                     </div>
