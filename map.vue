@@ -45,7 +45,7 @@
                                 <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
                             <ul class="store_list_container" v-if="filteredStores" tabindex="0">
-                                <li class="store_name" v-for="store in filteredStores" v-on:click="dropPin(store)">{{store.name}}</li>
+                                <li class="store_name" v-for="store in filteredStores" v-on:click="dropPin(store)" v-on:keyup.enter="dropPin(store)">{{store.name}}</li>
                             </ul>
                         </div>
                         <div class="col-md-9">
