@@ -1,5 +1,5 @@
 <template>
-    <div><!-- without an outer container div this component template will not render -->
+    <main><!-- without an outer container div this component template will not render -->
         <loading-spinner v-if="!dataLoaded"></loading-spinner>
         <transition name="fade">
             <div v-if="dataLoaded" v-cloak>
@@ -98,15 +98,21 @@
                 </div>
             </div>
         </transition>
-    </div>
+    </main>
 </template>
 <script>
-    define(["Vue", "vuex", "vue!vue-slick", "moment", "moment-timezone", "vue-moment", "vue!welcome_msg", "json!site.json"], function (Vue, Vuex, slick, moment, tz, VueMoment, welcomeMessage, Site) {
+    define(["Vue", "vuex", "vue-meta", "vue!vue-slick", "moment", "moment-timezone", "vue-moment", "vue!welcome_msg", "json!site.json"], function (Vue, Vuex, Meta, slick, moment, tz, VueMoment, welcomeMessage, Site) {
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
                     dataLoaded: false,
+                    meta: {
+                        meta_title: "",
+                        meta_description: "",
+                        meta_keywords: "",
+                        meta_image: ""
+                    }
                     slickOptions: {
                         adaptiveHeight: true,
                         arrows: true,
@@ -148,6 +154,8 @@
                         }
                     });
                     
+                    this.meta = this.findMetaDataByPath(this.$route.path);
+                    
                     this.dataLoaded = true;  
                 });
             },
@@ -155,6 +163,7 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
+                    'findMetaDataByPath',
                     'getPropertyHours',
                     'processedPromos',
                     'processedEvents'
@@ -256,6 +265,18 @@
                     } else {
                         return true
                     }
+                }
+            },
+            metaInfo () {
+                return {
+                    title: this.meta.meta_title,
+                    meta: [
+                        { name: 'description', vmid: 'description', content: this.meta.meta_description },
+                        { name: 'keywords',  vmid: 'keywords', content: this.meta.meta_keywords },
+                        { property: 'og:title', vmid: 'og:title', content: this.meta.meta_title },
+                        { property: 'og:description', vmid: 'og:description', content: this.meta.meta_description },
+                        { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
+                    ]
                 }
             }
         })
