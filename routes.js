@@ -231,7 +231,7 @@ define([], function () {
                     ]
                 },
                 {
-                    path: '/online_offers',
+                    path: '/online-offers',
                     component: view('default'),
                     meta: {
                         breadcrumb: 'Online Offers',
@@ -244,7 +244,7 @@ define([], function () {
                             name: 'coupons'
                         },
                         {
-                            path: '/online_offers/my-basket',
+                            path: '/online-offers/my-basket',
                             component: view('default'),
                             children: [
                                 {
