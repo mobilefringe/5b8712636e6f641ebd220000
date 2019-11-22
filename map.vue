@@ -44,9 +44,9 @@
                                 </search-component>
                                 <i id="store-search-icon" class="fa fa-search" aria-hidden="true"></i>
                             </div>
-                            <div class="store_list_container" v-if="filteredStores" tabindex="0">
-                                <p class="store_name" v-for="store in filteredStores" v-on:click="dropPin(store)">{{store.name}}</p>
-                            </div>
+                            <ul class="store_list_container" v-if="filteredStores" tabindex="0">
+                                <li class="store_name" v-for="store in filteredStores" v-on:click="dropPin(store)">{{store.name}}</li>
+                            </ul>
                         </div>
                         <div class="col-md-9">
                             <mapplic-png-map ref="pngmap_ref" :height="664" :hovertip="true" :storelist="allStores" :floorlist="floorList" :bindLocationOpened="true" :svgWidth="property.map_image_width" :svgHeight="property.map_image_height" :showPin="true" tooltiplabel="View Store Details"></mapplic-png-map>
