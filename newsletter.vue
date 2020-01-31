@@ -17,24 +17,14 @@
                             <div v-if="pageContent" v-html="pageContent.body"></div>
                             <form class="newsletter_form form-horizontal" action="//mobilefringe.createsend.com/t/d/s/ulikhh/" method="post" @submit.prevent="validateBeforeSubmit">
                                 <div class="row">
-                                    <div class="col-sm-12" >
+                                    <div class="col-sm-6">
                                         <label for="fieldfihudt" class="visuallyhidden">Full Name</label>
                                         <input v-model="form_data.name" required class="margin_20 form-control" id="fieldfihudt" name="cm-name" type="text" placeholder="Full Name">
                                     </div>
-                                    <!--<div class="col-sm-6" >-->
-                                    <!--    <label for="fieldfihudi" class="accessibility">Last Name</label>-->
-                                    <!--    <input v-model="form_data.last_name" required class="margin_20 form-control" id="fieldfihudi" name="cm-f-fihudi" type="text" placeholder="Last Name">-->
-                                    <!--</div>-->
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
+                                    <div class="col-sm-6">
                                         <label for="newsletter_email" class="visuallyhidden">Email</label>
                                         <input v-model="form_data.email" required class="margin_20 form-control" name="cm-ulikhh-ulikhh" type="email" placeholder="Email" id="newsletter_email">
                                     </div>
-                                    <!--<div class="col-sm-6">-->
-                                    <!--    <label for="fieldfihudd" class="accessibility">Phone Number</label>-->
-                                    <!--    <input id="fieldfihudd" v-model="form_data.phone" required class="margin_20 form-control" name="cm-f-fihudd" type="text" placeholder="Phone Number" />-->
-                                    <!--</div>-->
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
