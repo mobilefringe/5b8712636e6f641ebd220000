@@ -28,7 +28,7 @@
         <div id="app" v-cloak>
             <loading-spinner v-if="!dataLoaded"></loading-spinner>
             <header-component :menu_items="menu_items" :social_media="social_media" v-if="dataLoaded"></header-component>
-            <router-view v-if="dataLoaded" class="page-content"></router-view>
+            <router-view v-if="dataLoaded" class="page-content" role="main"></router-view>
             <footer-component :social_media="social_media" v-if="dataLoaded"></footer-component>
             {{property.subdomain}}
         </div>
