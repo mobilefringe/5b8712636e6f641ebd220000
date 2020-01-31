@@ -18,7 +18,7 @@
                             <form class="newsletter_form form-horizontal" action="//mobilefringe.createsend.com/t/d/s/ulikhh/" method="post" @submit.prevent="validateBeforeSubmit">
                                 <div class="row">
                                     <div class="col-sm-12" >
-                                        <label for="fieldfihudt" class="accessibility">Full Name</label>
+                                        <label for="fieldfihudt" class="visuallyhidden">Full Name</label>
                                         <input v-model="form_data.name" required class="margin_20 form-control" id="fieldfihudt" name="cm-name" type="text" placeholder="Full Name">
                                     </div>
                                     <!--<div class="col-sm-6" >-->
@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-sm-12">
-                                        <label for="newsletter_email" class="accessibility">Email</label>
+                                        <label for="newsletter_email" class="visuallyhidden">Email</label>
                                         <input v-model="form_data.email" required class="margin_20 form-control" name="cm-ulikhh-ulikhh" type="email" placeholder="Email" id="newsletter_email">
                                     </div>
                                     <!--<div class="col-sm-6">-->
