@@ -128,10 +128,6 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                         href: "#",
                         sub_menu: [
                             {
-                                name: "Center Information",
-                                href: "/center-information"
-                            },
-                            {
                                 name: "Contact Us",
                                 href: "/contact-us"
                             },
@@ -160,26 +156,11 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                         url: "https://www.facebook.com/Shoppencenter/",
                         iconClass: "fab fa-facebook"
                     },
-                    // {
-                    //     name: "Twitter",
-                    //     url: "https://twitter.com",
-                    //     iconClass: "fab fa-twitter"
-                    // },
                     {
                         name: "Instagram",
                         url: "https://www.instagram.com/Shoppencenter/",
                         iconClass: "fab fa-instagram"
-                    },
-                    // {
-                    //     name: "SnapChat",
-                    //     url: "https://www.snapchat.com",
-                    //     iconClass: "fab fa-snapchat-ghost"
-                    // },
-                    // {
-                    //     name: "YouTube",
-                    //     url: "https://www.youtube.com/channel/UCtiHBfDXPNfRL4_-DDluAVQ",
-                    //     iconClass: "fab fa-youtube"
-                    // }
+                    }
                 ],
             }
         },
