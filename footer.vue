@@ -70,7 +70,7 @@
                     return moment().year();
                 },
                 getPropertyAddress() {
-                    return this.property.address1 + ', ' + this.property.city + ', ' + this.property.province_state + ', ' + this.property.country
+                    return this.property.address1 + ', ' + this.property.city + ', ' + this.property.province_state + ', ' + this.property.postal_code
                 }
             },
             methods: {
