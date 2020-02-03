@@ -24,7 +24,7 @@
                         <div v-if="eventList" v-for="(events, key) in eventList">
                             <div class="row">
                                 <div class="col-md-12">
-                                    <h3 class="event_date_heading">{{ key }}</h3> 
+                                    <h2 class="event_date_heading">{{ key }}</h2> 
                                 </div>
                             </div>
                             <div class="row event_container" v-for="event in events">
@@ -32,7 +32,7 @@
                                     <img :src="event.image_url" :alt="'Event: ' + event.name" class="event_img img_max" />   
                                 </div>
                                 <div class="col-md-8">
-                                    <h4 class="event_name">{{ event.name }}</h4>
+                                    <h3 class="event_name">{{ event.name }}</h3>
                                     <p class="event_dates"><span v-if="event.tags && event.tags.length >0">{{event.tags[0]}} | </span> <span v-if="isMultiDay(event)">{{ event.start_date | moment("MMMM D", timezone)}} to {{ event.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ event.start_date | moment("MMMM D", timezone)}}</span></p>
                                     <div class="event_desc" v-html="event.description_short"></div>
                                     <router-link :to="{ name: 'eventDetails', params: { id: event.slug, banner: pageBanner }}">
@@ -61,7 +61,7 @@
                                                 {{ item.store.name }}
                                             </router-link>        
                                         </p>
-                                        <h4 class="event_name">{{ item.name }}</h4>
+                                        <h2 class="event_name">{{ item.name }}</h2>
                                         <p class="event_dates"><span v-if="isMultiDay(item)">{{ item.start_date | moment("MMMM D", timezone)}} - {{ item.end_date | moment("MMMM D", timezone)}}</span><span v-else>{{ item.start_date | moment("MMMM D", timezone)}}</span></p>
                                         <div class="event_desc" v-html="item.description_short"></div>
                                         <router-link :to="{ name: 'promotionDetails', params: { id: item.slug, banner: pageBanner }}">
