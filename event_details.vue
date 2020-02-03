@@ -88,8 +88,7 @@
 					this.currentEvent = this.findEventBySlug(this.id);
 					if (this.currentEvent === null || this.currentEvent === undefined) {
 						this.$router.replace({ name: '404' });
-					}
-					else {
+					} else {
 					    if (this.currentEvent.eventable_type === "Store"){
                             if (_.includes(this.currentEvent.event_image_url_abs, 'missing')) {
                                 this.currentEvent.image_url = this.currentEvent.store.store_front_url_abs; 
