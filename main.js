@@ -109,7 +109,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'vuex-router-syn
                             },
                             {
                                 name: "Online Offers",
-                                href: "/online_offers"
+                                href: "/online-offers"
                             }
                             
                         ]
