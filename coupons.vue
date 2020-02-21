@@ -14,7 +14,7 @@
                             <breadcrumb></breadcrumb>
                         </div>
                     </div>
-                    <div class="row margin_40">
+                    <div class="row margin_40" v-if="couponList.length > 0">
         		        <div class="col-md-12 clearfix">
         		            <!--<router-link  :to="{ name: 'couponBasket', params: { selected: selected_coupon_id }}">-->
         		                <div @click="addCookies()" class="animated_btn coupon_btn">
