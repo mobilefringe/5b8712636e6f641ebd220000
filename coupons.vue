@@ -51,7 +51,7 @@
                             </div> 
                         </div>
                     </div>
-                    <div class="row" v-else>
+                    <div class="row margin_40" v-else>
                         <div class="col-xs-12">
                             <p>There are no coupons posted at this time. Please check back soon!</p>
                         </div>
