@@ -23,7 +23,7 @@
         		            <!--</router-link>-->
         		        </div>
         		    </div>
-                    <div class="row">
+                    <div class="row" v-if="couponList.length > 0">
                         <div v-for="(item, index) in couponList" class="col-md-6 col-sm-6 col-xs-12">
                             <div :id="item.id" class="row coupon_container">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
@@ -49,6 +49,11 @@
                                     </div>
                                 </div>
                             </div> 
+                        </div>
+                    </div>
+                    <div class="row" v-else>
+                        <div class="col-xs-12">
+                            <p>There are no coupons posted at this time. Please check back soon!</p>
                         </div>
                     </div>
                 </div>
