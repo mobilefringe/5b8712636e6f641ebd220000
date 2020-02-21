@@ -209,45 +209,45 @@ define([], function () {
                 }
             ]
         },
-        {
-            path: '/online-offers',
-            component: view('default'),
-            meta: {
-                breadcrumb: 'Online Offers',
-            },
-            children: [
-                {
-                    path: '',
-                    component: view('coupons'),
+        // {
+        //     path: '/online-offers',
+        //     component: view('default'),
+        //     meta: {
+        //         breadcrumb: 'Online Offers',
+        //     },
+        //     children: [
+        //         {
+        //             path: '',
+        //             component: view('coupons'),
                     
-                    name: 'coupons'
-                },
-                {
-                    path: '/online-offers/my-basket',
-                    component: view('default'),
-                    children: [
-                        {
-                            path: '',
-                            component: view('coupon_basket'),
-                            meta: {
-                                breadcrumb: 'My Basket',
-                            },
-                            name: 'couponBasket',
-                            props: true
-                        }
-                    ]
-                },
-                {
-                    path: ':id',
-                    component: view('coupons_details'),
-                    meta: {
-                        breadcrumb: 'Online Offer Details',
-                    },
-                    name: 'couponDetails',
-                    props: true
-                }
-            ]
-        },
+        //             name: 'coupons'
+        //         },
+        //         {
+        //             path: '/online-offers/my-basket',
+        //             component: view('default'),
+        //             children: [
+        //                 {
+        //                     path: '',
+        //                     component: view('coupon_basket'),
+        //                     meta: {
+        //                         breadcrumb: 'My Basket',
+        //                     },
+        //                     name: 'couponBasket',
+        //                     props: true
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             path: ':id',
+        //             component: view('coupons_details'),
+        //             meta: {
+        //                 breadcrumb: 'Online Offer Details',
+        //             },
+        //             name: 'couponDetails',
+        //             props: true
+        //         }
+        //     ]
+        // },
         {
             path: '/404',
             name: '404',
