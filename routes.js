@@ -194,6 +194,20 @@ define([], function () {
                     ]
                 },
                 {
+                    path: '/delivery',
+                    component: view('default'),
+                    children: [
+                        {   
+                            path: '',
+                            component: view('delivery'),
+                            meta: {
+                                breadcrumb: 'Delivery',
+                            },
+                            name: 'delivery'
+                        }
+                    ]
+                },
+                {
                     path: '/map',
                     component: view('default'),
                     children: [
