@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-md-8">
                             <div id="map" class="margin_20">
-                                <mapplic-png-map ref="pngmap_ref" :height="314" :hovertip="true" :storelist="allStores" :floorlist="floorList" :svgWidth="property.map_image_width" :svgHeight="property.map_image_height" @updateMap="updatePNGMap"></mapplic-png-map>
+                                <mapplic-png-map id="details" ref="pngmap_ref" :height="314" :hovertip="true" :storelist="allStores" :floorlist="floorList" :svgWidth="property.map_image_width" :svgHeight="property.map_image_height" @updateMap="updatePNGMap"></mapplic-png-map>
                             </div>
                             <div class=" margin_30 store_details_desc" v-html="currentStore.rich_description"></div>
                             
@@ -143,7 +143,7 @@
 </template>
 
 <style>
-    .mapplic-popup-link {
+    #details .mapplic-popup-link {
         display: none !important;
     }
 </style>
