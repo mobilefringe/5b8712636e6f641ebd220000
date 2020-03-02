@@ -51,6 +51,19 @@
                                 <mapplic-png-map ref="pngmap_ref" :height="314" :hovertip="true" :storelist="allStores" :floorlist="floorList" :svgWidth="property.map_image_width" :svgHeight="property.map_image_height" @updateMap="updatePNGMap"></mapplic-png-map>
                             </div>
                             <div class=" margin_30 store_details_desc" v-html="currentStore.rich_description"></div>
+                            
+                            <div v-if="deliveryAvailable" class="margin_30">
+                                <h2 class="store_details_title">Delivery Options:</h2>
+                                <div class="store_details_delivery">
+                                    <img v-if="hasDoordash" class="delivery_option" src="//codecloud.cdn.speedyrails.net/sites/5ddeafc56e6f6416db790000/image/png/1568400931000/doordash.png" alt="Delivery available with DoorDash" />
+                                    <img v-if="hasGrubhub" class="delivery_option" src="//codecloud.cdn.speedyrails.net/sites/5ddeafc56e6f6416db790000/image/png/1568400381000/grubhub.png" alt="Delivery available with Grubhub" />
+                                    <img v-if="hasPostmates" class="delivery_option" src="//codecloud.cdn.speedyrails.net/sites/5ddeafc56e6f6416db790000/image/png/1569270191004/postmates.png" alt="Delivery available with Postmates" />
+                                    <div v-if="hasRestaurantDelivery" class="delivery_option"><span>Restaurant Delivery</span></div>
+                                    <img v-if="hasUberEats" class="delivery_option" src="//codecloud.cdn.speedyrails.net/sites/5ddeafc56e6f6416db790000/image/png/1568400422000/ubereats.png" alt="Delivery available with Uber Eats" />
+                                    
+                                </div>
+                            </div>
+                            
                             <div v-if="currentStore.events">
                                 <h3 class="store_details_title">Current Events</h3>
                                 <div class="row margin_40">
@@ -149,7 +162,14 @@
                     map: null,
                     storeEvents: null,
                     storePromotions: null,
-                    storeCoupons: null
+                    storeCoupons: null,
+                    
+                    deliveryAvailable: false,
+                    hasDoordash: false,
+                    hasGrubhub: false,
+                    hasPostmates: false,
+                    hasRestaurantDelivery: false,
+                    hasUberEats: false
                 }
             },
             props:['id'],
