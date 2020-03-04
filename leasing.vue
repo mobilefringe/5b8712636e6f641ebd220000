@@ -19,15 +19,15 @@
                             <div v-if="main" v-html="main.body"></div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                            <a v-if="leasingBooklet" :href="leasingBooklet" target="_blank">
-        		                <div class="animated_btn leasing_btn">
-        		                    Leasing Booklet
-        		                </div>    
-        		            </a>    
-                        </div>
-                    </div>
+                    <!--<div class="row">-->
+                    <!--    <div class="col-md-12">-->
+                    <!--        <a v-if="leasingBooklet" :href="leasingBooklet" target="_blank">-->
+        		          <!--      <div class="animated_btn leasing_btn">-->
+        		          <!--          Leasing Booklet-->
+        		          <!--      </div>    -->
+        		          <!--  </a>    -->
+                    <!--    </div>-->
+                    <!--</div>-->
                     <div class="row">
                         <div class="col-md-12">
                             <div class="leasing_contact" v-if="leasingInfo" v-html="leasingInfo.body"></div>
