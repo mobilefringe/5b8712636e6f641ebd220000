@@ -107,7 +107,7 @@
             },
             created() {
                 this.$store.dispatch("getData", "contests").then(response => {
-                    this.currentContest = this.findContestByShowOnSlug('/peninsula-contest');
+                    this.currentContest = this.findContestByShowOnSlug('peninsula-contest');
                     if (this.currentContest) {
                         this.dataLoaded = true;
                     } else {
